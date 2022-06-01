@@ -1,0 +1,552 @@
+{
+	"info": {
+		"_postman_id": "5f8c7866-d407-4a22-a6d2-1f79ce139ccf",
+		"name": "A.API-REST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "USUARIOS",
+			"item": [
+				{
+					"name": "ObtenerUsuarios",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/usuarios",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CrearUsuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Juniors Palacio\",\r\n    \"email\": \"juniors@gmail.com\",\r\n    \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/usuarios",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TIPOSEQUIPOS",
+			"item": [
+				{
+					"name": "GetTiposEquiposUsuarioActivos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/tiposequipo/user-activo",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"tiposequipo",
+								"user-activo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CrearTipoEquipo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"computo\",\r\n    \"estado\": true,\r\n    \"usuario\": {\r\n        \"email\": \"juniors@gmail.com\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/tiposequipo",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"tiposequipo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetTipoEquipoByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/tiposequipo/629248b0ba870171e823cff6",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"tiposequipo",
+								"629248b0ba870171e823cff6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizaTipoEquipoByID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"computo\",\r\n    \"estado\": true,\r\n    \"usuario\": {\r\n        \"email\": \"juniors@gmail.com\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/tiposequipo/629248b0ba870171e823cff6",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"tiposequipo",
+								"629248b0ba870171e823cff6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BorrarTipoEquipoByID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/tiposequipo/62911d2fd44fad1ecf07cc66",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"tiposequipo",
+								"62911d2fd44fad1ecf07cc66"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ESTADOS",
+			"item": [
+				{
+					"name": "GetEstados",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/estados",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"estados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetEstadoById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/estados/629248ecba870171e823d000",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"estados",
+								"629248ecba870171e823d000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarEstado",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/estados/629248ecba870171e823d000",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"estados",
+								"629248ecba870171e823d000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CrearEstado",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"uso\",\r\n    \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/estados",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"estados"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MARCAS",
+			"item": [
+				{
+					"name": "GetMarcas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/marcas",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"marcas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetMarcaById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/marcas/6292491eba870171e823d007",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"marcas",
+								"6292491eba870171e823d007"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarMarca",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/marcas/6292491eba870171e823d007",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"marcas",
+								"6292491eba870171e823d007"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CrearMarca",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"hp\",\r\n    \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/marcas",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"marcas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "INVENTARIO",
+			"item": [
+				{
+					"name": "UploadImagen",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "foto",
+									"type": "file",
+									"src": "/C:/Users/Juniors palacio/Desktop/API_REST/uploads/pc-inventario.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/api/inventarios/62924990ba870171e823d011/upload-image",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"inventarios",
+								"62924990ba870171e823d011",
+								"upload-image"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetInventarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/inventarios/",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"inventarios",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetInventarioByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/inventarios/62924990ba870171e823d011",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"inventarios",
+								"62924990ba870171e823d011"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CrearInventario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"serial\": \"0-0-0\",\r\n    \"modelo\": \"Modelo hp\",\r\n    \"descripcion\": \"Pc juniors\",\r\n    \"foto\": \"\",\r\n    \"color\": \"rojo\",\r\n    \"precio\": 50,\r\n    \"usuario\": \"6292489cba870171e823cff1\",\r\n    \"marca\": \"6292491eba870171e823d007\",\r\n    \"estado\": \"629248ecba870171e823d000\",\r\n    \"tipoEquipo\": \"629248b0ba870171e823cff6\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/inventarios/",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"inventarios",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarInventarioByID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"serial\": \"0-0-0\",\r\n    \"modelo\": \"Modelo 574\",\r\n    \"descripcion\": \"pc juniors modificado\",\r\n    \"usuario\": \"6292489cba870171e823cff1\",\r\n    \"marca\": \"6292491eba870171e823d007\",\r\n    \"estado\": \"629248ecba870171e823d000\",\r\n    \"tipoEquipo\": \"629248b0ba870171e823cff6\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/inventarios/62924990ba870171e823d011",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"inventarios",
+								"62924990ba870171e823d011"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetImage",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/inventarios/62924990ba870171e823d011/image",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"inventarios",
+								"62924990ba870171e823d011",
+								"image"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
